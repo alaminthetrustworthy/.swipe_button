@@ -1,4 +1,4 @@
-package com.example.swipebutton;
+package com.example.swipe_btn;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -22,6 +22,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
+
+import com.example.swipebutton.OnStateChangeListener;
 
 public class Swipe_button extends RelativeLayout {
     private static final int ENABLED = 0;
@@ -483,7 +485,7 @@ public class Swipe_button extends RelativeLayout {
     private void setTrailingEffect() {
         if (trailEnabled) {
             layer.setVisibility(View.VISIBLE);
-            layer.setLayoutParams(new RelativeLayout.LayoutParams(
+            layer.setLayoutParams(new LayoutParams(
                     (int) (swipeButtonInner.getX() + swipeButtonInner.getWidth() / 3), centerText.getHeight()));
         }
     }
